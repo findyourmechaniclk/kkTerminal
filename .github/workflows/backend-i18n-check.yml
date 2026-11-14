@@ -6,6 +6,10 @@ on:
     branches:
       - '**' # on all branches
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   run-checker:
     runs-on: ubuntu-24.04
