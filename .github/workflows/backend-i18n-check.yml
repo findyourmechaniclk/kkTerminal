@@ -1,6 +1,7 @@
 name: Backend I18n Check
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - '**' # on all branches
